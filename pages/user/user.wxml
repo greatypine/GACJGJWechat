@@ -1,0 +1,19 @@
+<!--pages/user/user.wxml-->
+<view class='content'>
+  <view class='view1'>
+    <text class='view1_text'>标题:</text>
+    <input class='view1_input'></input>
+  </view>
+  <view class='view1'>
+    <text class='view1_text'>电话:</text>
+    <input class='view1_input'></input>
+  </view>
+  
+   <view class='view1'>
+     <button class='button' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">确定</button>
+  </view>
+  
+
+</view>
+
+
