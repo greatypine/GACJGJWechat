@@ -1,0 +1,68 @@
+<!--pages/personal/personal.wxml-->
+<view class='personal_view'>
+  <view class='personal_context_view'>
+  <view class='personal_img_view'>
+   <view class='img_view'>
+         <view class='style'>
+          <!-- <image src="{{thumb}}" class="thumb"></image> -->
+            <open-data type="userAvatarUrl" class="thumb"></open-data>
+         </view>
+          
+      </view>
+      <view class='iphone_view'>
+      <view>
+         <text class="nickiphone">{{nickiphone}}</text>
+      </view>
+           
+      </view>
+  </view>
+  </view>
+   <view class='header_context'>
+          <view class='user_name_view'>
+             <view class='user_name_context'>
+                <text >员工姓名</text>
+             </view>
+              <view class='user_name'>
+               <view class='font_style'>
+                  <text>{{user_name}}</text>
+               </view>
+             </view>
+          </view>
+          <view class='user_employeeid_view'>
+             <view class='user_name_context'>
+                <text >员工号</text>
+             </view>
+             <view class='user_name'>
+               <view class='font_style'>
+                  <text>{{employee_id}}</text>
+               </view>
+             </view>
+          </view>
+          <view class='user_zw_view'>
+             <view class='user_name_context'>
+                <text >职务</text>
+             </view>
+             <view class='user_name'>
+               <view class='font_style'>
+                  <text>{{zw}}</text>
+               </view>
+             </view>
+          </view>
+       </view>
+  <view class='header_context'>
+  <view class='invite_view'>
+             <view class='user_name_context invite_des'>
+                <text >社员邀请码:</text>
+             </view>
+             <view class='user_name'>
+               <view class='invite_style'>
+                  <text style='height:50rpx;line-height:50rpx'selectable='true'>{{inviteCode}}</text>
+                    <!-- <button class='copy_btn' bindtap='copy_btn'>复制</button> -->
+               </view>
+             </view>
+          </view>
+  </view>
+  <view class='exit_logon_view'>
+    <button bindtap='exit_logon' class='exit_but'>退出登录</button>
+  </view>
+</view>

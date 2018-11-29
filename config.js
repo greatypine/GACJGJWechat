@@ -6,11 +6,13 @@
 
 
 var config = {
-  testpath: "https://data.guoanshequ.top/daqWeb/"
-  // testpath: "https://data.guoanshequ.com/daqWeb/"
+  // daqpath: "https://data.guoanshequ.com/daqWeb/",
+  // gasmpath: "https://store.guoanshuju.com/GASM/"
   // testpath: "https://datatest.guoanshequ.top/daqWeb/"
-  // testpath: "http://10.16.31.242/daqWeb/"
-  // testpath: "http://10.16.31.197:8081/daqWeb/"
+  // daqpath: "http://10.16.31.242/daqWeb/",
+  // gasmpath: "http://10.16.31.208:8888/GASM/",
+  daqpath: "http://10.16.31.242/daqWeb/",
+  gasmpath: "http://10.16.31.242:8888/GASM/"
 };
 
 module.exports = config

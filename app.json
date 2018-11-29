@@ -1,7 +1,14 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/user/user"
+    "pages/nearby_store/nearby_store",
+    "pages/nearby_men/nearby_men",
+    "pages/community_service/community_service",
+    "pages/personal/personal",
+    "pages/usersharepage/usersharepage",
+    "pages/userwork/userwork"
+
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

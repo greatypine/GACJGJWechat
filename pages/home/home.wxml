@@ -1,18 +1,147 @@
 <!--pages/home/home.wxml-->
-<view class='content'>
-  <view class='view1'>
-    <text class='view1_text'>标题:</text>
-    <input class='view1_input' bindinput="userNameInput">{{userName}}</input>
+<view class='view_bg' wx:if="{{showHome}}">
+
+  <!--mask 登录选择界面-->
+  <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+  <!--content-->
+  <!--使用animation属性指定需要执行的动画-->
+  <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+    <!--drawer content-->
+    <view class="drawer_content">
+      <view>
+        <button class='wx_btn' bindtap='goLogin'>
+
+          我是国安侠</button>
+      </view> 
+      <view style='text-align:center'>
+        <!-- <label class='login_btn' bindtap='' style='background:red'>输入账号和密码登录</label>  -->
+        <button class='account_btn' bindtap='goHome'>我不是国安侠</button>
+      </view>
+    </view>
+    <!-- <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  -->
   </view>
-  <view class='view1'>
-    <text class='view1_text'>电话:</text>
-    <input class='view1_input' bindinput="userPhoneInput">{{userphone}}</input>
+
+  <!--账号和密码登录界面  -->
+  <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showLoginView}}"></view>
+  <!--content-->
+  <!--使用animation属性指定需要执行的动画-->
+  <view animation="{{animationData}}" class="drawer_box" wx:if="{{showLoginView}}">
+
+    <!--drawer content-->
+    <view class="login_content">
+      <view class="login_title">登录</view>
+      <view class="top grid">
+        <!-- <label class="title col-0">账号</label> -->
+        <input class="input_base input_h30 col-1 bottom_line" name="rName" placeholder="员工编号／手机号／登录账号" type='text' bindinput="userNameInput" value='{{userName}}'></input>
+      </view>
+      <view class="top grid">
+        <!-- <label class="title col-0">密码</label> -->
+        <input class="input_base input_h30 col-1 bottom_line" name="mobile" placeholder="请输入密码" type='password' bindinput="passWdInput" value='{{userPwd}}'></input>
+      </view>
+      <view style='margin-top:0px'>
+        <button class='login_btn' bindtap='loginbtn'>登录</button>
+      </view>
+    </view>
+
   </view>
-  
-   <view class='view1'>
-     <button class='button'>提交</button>
+
+
+  <!--            title           -->
+  <view class="header">
+    <view class='header_img'>
+      <view class='header_img_view' bindtap='goto_login'>
+        <open-data type="userAvatarUrl" class="thumb"></open-data>
+        <!-- <view> -->
+          <open-data type="userNickName" class="nickname"></open-data>
+        <!-- </view> -->
+      </view>
+    </view>
+
   </view>
-  
+  <view class='view1' wx:if="{{showStore}}">
+    <view class='store_view' bindtap='goto_store'>
+      <image src='{{src_store}}' class='store_img'></image>
+       <view class='text_pin'> 
+        <text class='store_text'>附近门店</text>
+       </view> 
+    </view>
+    <view class='guoanxia_view' bindtap='goto_men'>
+      <image src='{{src_men}}' class='store_img'></image>
+      <view class='text_pin'>
+        <text class='store_text'>附近国安侠</text>
+      </view>
+    </view>
+    <view class='guoanxia_view' bindtap='goto_shequ'>
+      <image src='{{service_img}}' class='store_img'></image>
+      <view class='text_pin'>
+        <text class='store_text'>社区服务介绍</text>
+      </view>
+    </view>
+  </view>
+  <view class="search-flex {{scrolltop>150?'tophide':''}}">
+		<view class="search-bar">
+			<input class='search_input' placeholder-class="phcolor" type="text" maxlength="4" placeholder="请输入客户电话/服务单号后4位" bindinput="inputSearch"></input>
+			<button class="search-btn" bindtap="submitSearch">搜索</button>
+		</view>
+	</view>
+
+
+  <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" upper-threshold="100" bindscrolltolower="scrollLoading" >
+    <view class="service-list" wx:for="{{worklist}}" wx:key="{{item.id}}">
+      <view class="service-item" wx:if="{{iswork}}">
+        <view class='work_view' bindtap='openpage' data-no="{{item.id}}" data-date="{{item.date}}" data-_type="{{item._type}}" data-men="{{item.men}}" data-user_name="{{item.user_name}}" data-user_phone="{{item.user_phone}}" data-content="{{item.content}}" data-status="{{item.status}}" data-address_phone="{{item.address_phone}}" data-employee_phone="{{item.employee_phone}}" data-address="{{item.address}}" data-rcv_name="{{item.rcv_name}}" data-order_sn="{{item.order_sn}}" data-home_date="{{item.home_date}}">
+          <view class='work_view_view1 status{{item.statusCode}}'>
+            <view class='work_date_view1'>
+            <view class='view_name'>
+             <view>客户姓名：</view>
+                <view>{{item.user_name}}</view>
+            </view>
+                <view class='view_date'>{{item.home_date}}</view>
+            </view>
+            <view class='work_date_view'>
+              <view>客户手机：</view>
+              <view>{{item.user_phone}}</view>
+            </view>
+            <view class='work_no_view'>
+              <view>服务单号：</view>
+              <view>{{item.id}}</view>
+            </view>
+            <view class='work_date_view' wx:if="{{item.status =='已完成'}}">
+              <view>订单编号：</view>
+              <view>{{item.order_sn}}</view>
+            </view> 
+          </view>
+          <view class='work_view_view2'>
+            <view class='work_content_view'>
+              <view class='context_css'>服务内容</view>
+              <view class='user_user'>{{item.content}}</view>
+            </view> 
+          </view>
+        </view>
+        <view class='work_status_view'>
+          <view class='work_status'>{{item.status}}</view>
+          <button class='share_but' open-type="share" wx:if="{{showShareBut&&(item.status =='待确认'||item.status =='客户确认中')}}" data-no="{{item.id}}" data-date="{{item.date}}" data-_type="{{item._type}}" data-men="{{item.men}}" data-user_name="{{item.user_name}}" data-user_phone="{{item.user_phone}}" data-content="{{item.content}}"
+            data-status="{{item.status}}" data-address_phone="{{item.address_phone}}" data-employee_phone="{{item.employee_phone}}"data-address="{{item.address}}" data-rcv_name="{{item.rcv_name}}" data-home_date="{{item.home_date}}">{{item.but_str}}</button>
+        </view>
+      </view>
+      
+    </view>
+    <view class='nowork' wx:if="{{nowork}}">暂无服务单</view>
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">没有更多数据了</view>
+    <view class="gototop {{scrolltop>200?'active':''}}" bindtap="goToTop"></view>
+  </scroll-view>
 
 </view>
+<view class='container' wx:if="{{showLogin}}">
+  <view class='isNotLogin'>
+    <view class='isNotLogin_view1'>
+      授权获取基本信息后查看详情
+    </view>
+    <button class='isNotLogin_view2' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      授权
+    </button>
 
+  </view>
+
+</view>

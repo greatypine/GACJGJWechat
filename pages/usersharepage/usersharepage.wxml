@@ -1,0 +1,79 @@
+<!--pages/usersharepage/usersharepage.wxml-->
+<view class='page_view'>
+<!--客户信息-->
+  <view class='user_view1'>
+    <view class='user_view_title'>
+      客户信息
+    </view>
+    <view class='user_view1_name'>
+      <view class='user_name1'>{{order_name}}</view>
+      <view class='user1_phone'>{{order_phone}}</view>
+    </view>
+  
+  </view>
+<!--收货人信息-->
+  <view class='user_view'>
+    <view class='user_view_title'>
+      收货人信息
+    </view>
+    <view class='user_view_phone'>
+      <view class='user_name'>收货姓名</view>
+      <view class='user_phone'>{{rcv_name}}</view>
+    </view>
+   
+    <view class='user_view_phone'>
+      <view class='user_name'>收货电话</view>
+      <view class='user_phone'>{{address_phone}}</view>
+    </view>
+     <view class='user_view_address'>
+      <view class='user_address'>收货地址</view>
+      <view class='user_address_context'>{{order_address}}</view>
+    </view>
+  </view>
+
+  <!--订单信息-->
+  <view class='order_view'> 
+    <view class='user_view_title'>
+      工单信息
+    </view>
+    <view class='order_view_name'>
+      <view class='user_name'>工单编号：</view>
+      <view class='order_no'>{{order_no}}</view>
+      <view class='copy_view' bindtap='copy_btn'>复制</view>
+    </view>
+    <view class='order_view_name'>
+      <view class='user_name'>下单时间：</view>
+      <view class='order_no'>{{order_date}}</view>
+    </view>
+    <view class='order_view_name'>
+      <view class='user_name'>工单类型：</view>
+      <view class='order_no'>{{order_type}}</view>
+    </view>
+    <view class='order_view_employee'>
+      <view class='user_name'>服务国安侠：</view>
+      <view class='order_no'>{{order_employee}}</view>
+      <view class='employee_phone'  bindtap="gocallphone">{{employee_phone}}</view>
+      <view class='order_no' bindtap="gocallphone"><image src='../images/phone.png' class='phone_img'></image></view>
+      
+    </view>
+    <view class='order_view_status'>
+      <view class='status_title'>工单状态：</view>
+      <view class='status_type'>{{order_status}}</view>
+    </view>
+  </view>
+  <!--订单内容-->
+  <view class='order_view1'>
+    <view class='user_view_title'>
+      工单内容
+    </view>
+    <view class='order_view_status'>
+      <view class='status_context'>{{order_content}}</view>
+    </view>
+  </view>
+
+   <view class='view_but' wx:if="{{isBut}}">
+                 <button class='surebut' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" data-type="{{2}}">确认服务单</button>
+        <!-- <button class='but'  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" data-type="{{2}}">取消服务单</button> -->
+    </view>
+
+</view>

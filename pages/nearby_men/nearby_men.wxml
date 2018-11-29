@@ -1,0 +1,2 @@
+<!--pages/nearby_men/nearby_men.wxml-->
+<web-view src='{{url}}'></web-view>

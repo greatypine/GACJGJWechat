@@ -1,0 +1,209 @@
+/* pages/test/test.wxss */
+.page_view{
+   height: 100%;
+  background-color: #f5f5f5;
+}
+.user_view{
+  width: 90%;
+  height: auto;
+  background-color:#fff;
+  padding-left:5%; 
+  padding-right: 5%;
+  color: #888;
+  box-shadow:1rpx 1rpx 1rpx #999;
+  margin-top: 30rpx;
+  
+}
+.user_view1{
+   width: 90%;
+  height: auto;
+  background-color:#fff;
+  padding-left:5%; 
+  padding-right: 5%;
+  color: #888;
+  box-shadow:1rpx 1rpx 1rpx #999;
+  
+
+}
+.user_view_title{
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20rpx;
+  font-size: 28rpx;
+  padding-top: 20rpx;
+  color: #779FF7;
+}
+.user_view_name{
+  width: 100%;
+  display: flex;
+  padding-top: 20rpx;
+  font-size: 26rpx;
+}
+.user_view1_name{
+  width: 100%;
+  display: flex;
+  padding-top: 20rpx;
+  font-size: 26rpx;
+  padding-bottom: 20rpx;
+  align-items: center;
+
+}
+.user_phone{
+  padding-left: 26rpx;
+  color: #000;
+}
+.user_address_context{
+  padding-left: 26rpx;
+  width: 80%;
+  color: #000;
+}
+.user_view_address{
+  width: 100%;
+  display: flex;
+  padding-top: 10rpx;
+  font-size: 26rpx;
+  padding-bottom: 10rpx;
+
+}
+.user_address{
+  width: 16%;
+
+}
+
+.user_view_phone{
+  width: 100%;
+  display: flex;
+ padding-top: 10rpx;
+  font-size: 26rpx;
+
+
+
+}
+.order_view{
+  width: 90%;
+  height: auto;
+  background-color:#fff;
+  padding-left:5%;
+  padding-right: 5%;
+  color: #888;
+  margin-top: 30rpx;
+  box-shadow:1rpx 1rpx 1rpx #999;
+
+}
+.order_view1{
+  width: 90%;
+  height: auto;
+  background-color:#fff;
+  padding-left:5%;
+  padding-right: 5%;
+  color: #888;
+  margin-top: 30rpx;
+  box-shadow:1rpx 1rpx 1rpx #999;
+  padding-bottom: 130rpx;
+}
+.order_view_name{
+  width: 100%;
+  display: flex;
+  padding-top: 20rpx;
+  font-size: 26rpx;
+
+}
+.employee_phone{
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: #389e63;
+  
+}
+.status_type{
+  color: red;
+  font-size: 40rpx;
+}
+.order_view_status{
+  width: 100%;
+  display: flex;
+  padding-top: 20rpx;
+  font-size: 26rpx;
+  padding-bottom: 30rpx;
+
+ 
+
+}
+.order_view_employee{
+  width: 100%;
+  display: flex;
+  padding-top: 20rpx;
+  font-size: 26rpx;
+  align-items: center;
+
+}
+.status_title{
+ justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+.status_context{
+ justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #000;
+
+}
+.view_but{
+  width: 100%;
+  position: fixed;
+  z-index: 9999; 
+  padding: 16rpx;
+  display: flex;
+  bottom: 0;
+}
+.surebut{
+  width: 80%;
+  /* float: left; */
+  margin-left: 10%;
+  background-color: red;
+  color: #fff;
+  margin-top: 30rpx;
+
+
+}
+.but{
+  width: 40%;
+  float: right;
+  margin-right: 5%;
+  background-color: red;
+  color: #fff;
+    margin-top: 30rpx;
+    margin-bottom: 60rpx;
+}
+.status_view{
+  font-size: 50rpx;
+  color: red;
+}
+.phone_img{
+  width: 50rpx;
+  height: 50rpx;
+  align-items: center;
+  padding-left: 20rpx;
+  display: flex;
+}
+.user1_phone{
+  padding-left: 26rpx;
+  color: red;
+  font-size: 36rpx;
+
+}
+.copy_view{
+  margin-left: 30rpx;
+  color: #389e63;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  border: 1px solid lightgray;
+  border-radius: 6rpx;
+  
+}
+.user_name1{
+  color: #000;
+}
+.order_no{
+  color: #000;
+}

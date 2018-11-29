@@ -1,0 +1,8 @@
+<!--pages/community_service/community_service.wxml-->
+<view class='view'>
+   <view class='view_view'>
+    <image src='{{src_img}}' class='service_img' bindtap="previewImage"></image>
+   </view>
+   
+
+</view>
