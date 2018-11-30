@@ -8,6 +8,8 @@
 var config = {
   // daqpath: "https://data.guoanshequ.com/daqWeb/",
   // gasmpath: "https://store.guoanshuju.com/GASM/"
+  // testpath: "https://data.guoanshequ.top/daqWeb/"
+  //testpath: "https://data.guoanshequ.com/daqWeb/"
   // testpath: "https://datatest.guoanshequ.top/daqWeb/"
   // daqpath: "http://10.16.31.242/daqWeb/",
   // gasmpath: "http://10.16.31.208:8888/GASM/",
