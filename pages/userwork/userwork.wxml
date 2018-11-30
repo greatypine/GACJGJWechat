@@ -69,7 +69,7 @@
     </view>
   </view>
   <!--订单内容-->
-  <view class='order_view1'>
+  <view class='order_view1'> 
     <view class='user_view_title'>
       工单内容
     </view>
